@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:revival/categorylist.dart';
+import 'package:revival/place_item.dart';
 import 'package:revival/search.dart';
+import 'package:revival/staggeredgrid.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,13 +22,14 @@ class HomeScreen extends StatelessWidget {
             child: Text(
               'Explore the World',
               style: TextStyle(
-                fontFamily: 'Pacifico',
+                fontFamily: 'Urbanist',
                 fontSize: 30,
                 height: 1.3,
               ),
             ),
           ),
           CategoryList(),
+          PlaceStaggeredGridView(),
         ],
       )),
     );
@@ -34,6 +37,12 @@ class HomeScreen extends StatelessWidget {
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
+      title: Center(
+          child: Text(
+        "Traveller",
+        style: TextStyle(
+            fontFamily: 'Pacifico', fontSize: 30, color: Colors.black),
+      )),
       elevation: 0.0,
       backgroundColor: Theme.of(context).backgroundColor,
       leading: IconButton(

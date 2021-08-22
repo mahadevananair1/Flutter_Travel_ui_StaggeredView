@@ -38,9 +38,8 @@ class _CategoryListState extends State<CategoryList> {
                       fontWeight: categoryTracker == index
                           ? FontWeight.bold
                           : FontWeight.normal,
-                      color: categoryList == index
-                          ? Theme.of(context).primaryColor
-                          : Colors.grey,
+                      color:
+                          categoryList == index ? Colors.purple : Colors.grey,
                     ),
                   ),
                 ),
